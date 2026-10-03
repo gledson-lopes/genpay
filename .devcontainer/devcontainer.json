@@ -1,0 +1,19 @@
+{
+    "name": "GenPay Zed Dev Environment",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "target": "dev",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspaces/genpay",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/genpay,type=bind",
+    "remoteEnv": {
+        "PATH": "/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    "customizations": {
+        "zed": {
+            "extensions": ["rust"]
+        }
+    },
+    "remoteUser": "root"
+}
